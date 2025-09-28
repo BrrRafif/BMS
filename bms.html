@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Plaza Selatan</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <div class="navbar-nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Facility</a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <main class="content" data-aos="zoom-in-up" data-aos-duration="5000" data-aos-delay="300">
+        <div class="home-content-text">
+          <h1 class="home-title">
+            <span id="element" class="element"></span>
+          </h1>
+          <!-- <a href="wa.me/629506393194" class="cta">Let's Talk</a> -->
+        </div>
+        <div class="home-content-image">
+          <img src="img/plaza-4.jpg" alt="profile" />
+        </div>
+      </main>
+    </section>
+    <!-- Home Section End  -->
+
+    <!-- About section start -->
+    <section id="about" class="about" data-aos="zoom-in-down" data-aos-duration="5000" data-aos-delay="300">
+      <h2><span>About</span> Us</h2>
+      <div class="row">
+        <div class="content">
+          <p>
+            Plaza Selatan adalah area yang dirancang sebagai ruang interaksi dan berbagi informasi bagi warga Informatika. Di sini, terdapat mading yang menampilkan berbagai informasi terkini, serta beberapa Tugas Akhir (TA) dari mahasiswa yang dipamerkan untuk memberikan inspirasi dan referensi. Selain itu, fasilitas lounge yang nyaman juga tersedia, memberikan tempat bagi mahasiswa untuk bersantai, berdiskusi, atau bekerja secara kolaboratif. Ruang ini menjadi titik pusat bagi komunitas Informatika untuk berkumpul, berbagi ide, dan menikmati suasana yang mendukung kegiatan akademik maupun sosial.
+          </p>
+        </div>
+        <!-- Find Us In Section -->
+      <div class="find-us-in">
+        <h3>Find us in</h3>
+        <div class="location-card">
+          <div class="location-image">
+            <img src="img/TC.jpg" alt="Location Image" />
+          </div>
+          <div class="location-details">
+            <h4 class="location-name">Informatics South Area - 2nd Floor</h4>
+            <p class="location-description">
+              Teknik Kimia Street - Teknik Informatika Departement<br>
+              Campus Institut Teknologi Sepuluh Nopember Surabaya<br>
+              Highway ITS, Sukolilo, Surabaya 60111, Indonesia
+            </p>
+            <div class="location-schedule">
+              <strong>Opening Hours:</strong>
+              <p>Mon - Fri: 7 AM - 6 PM</p>
+              <p>Sat - Sun: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section end -->
+
+    <!-- Facility start  -->
+    <section id="projects" class="projects" data-aos="fade-right"data-aos-duration="5000" data-aos-delay="300">
+      <h2><span>Fasilitas</span></h2>
+      <div class="row">
+        <div class="facility-card">
+          <img
+            src="img/plaza-2.jpg" class="facility-card-img" width="300"/>
+          <h3 class="facility-card-title">Meja Kursi</h3>
+        </div>
+        <div class="facility-card">
+          <img src="img/kipas.jpg" class="facility-card-img" width="300" />
+          <h3 class="facility-card-title">Kipas</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section end -->
+
+    <!-- Footer Section start -->
+    <footer>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Facility</a>
+      </div>
+
+      <div class="credit">
+        <p>Property of <a href="">Kelompok 9</a> | &copy; 2025</p>
+      </div>
+    </footer>
+    <!-- Footer Section end -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="script.js"></script>
+
+    <!-- javascript type -->
+    <!-- source: https://github.com/mattboldt/typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Plaza Selatan"],
+        typeSpeed: 200,
+        loop: false,
+        onComplete: function(self) { // loop tapi manual waktunya
+            setTimeout(function() {
+                self.reset();  // Reset animasi ke awal setiap selesai
+                self.start();  // Setelah reset, mulai ulang animasinya
+            }, 10000);  // Delay of 10 detik
+        }
+      });
+    </script>
+
+  <script>
+      const navbar = document.querySelector('.navbar');
+      
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > lastScrollY) {
+          navbar.classList.add('navbar--hidden');
+        } else {
+          navbar.classList.remove('navbar--hidden');
+        }
+        lastScrollY = window.scrollY;
+      });
+    </script>
+
+    <!-- source: https://github.com/michalsnik/aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
