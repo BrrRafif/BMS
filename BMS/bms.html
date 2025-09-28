@@ -52,29 +52,37 @@
     <!-- Home Section End  -->
 
     <!-- About section start -->
-    <!-- <section id="about" class="about" data-aos="zoom-in-down" data-aos-duration="5000" data-aos-delay="300">
-      <h2><span>About</span> Me</h2>
+    <section id="about" class="about" data-aos="zoom-in-down" data-aos-duration="5000" data-aos-delay="300">
+      <h2><span>About</span> Us</h2>
       <div class="row">
         <div class="content">
-          <p>
-            I'm Nicholas, I am a Computer Science student at Institut Teknologi
-            Sepuluh Nopember (ITS). I have a strong interest in technology,
-            especially in web development, and have actively contributed as part
-            of several web development committees. Besides tech, I am also
-            passionate about business and entrepreneurship.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            obcaecati ab accusamus sint qui praesentium nihil maxime tenetur
-            placeat voluptas. Consequuntur iure nam illum laudantium dignissimos
-            facere, est vitae maiores id inventore sed esse amet deleniti in aut
-            nostrum ea pariatur reiciendis corrupti tenetur blanditiis porro
-            ullam distinctio doloremque. Recusandae nihil illum consectetur
-            dolore ex est numquam fugiat necessitatibus error!
+          <p style="text-align: justify;"> <!-- Prompting dikit -->
+            Plaza Selatan adalah area yang dirancang sebagai ruang interaksi dan berbagi informasi bagi warga Informatika. Di sini, terdapat mading yang menampilkan berbagai informasi terkini, serta beberapa Tugas Akhir (TA) dari mahasiswa yang dipamerkan untuk memberikan inspirasi dan referensi. Selain itu, fasilitas lounge yang nyaman juga tersedia, memberikan tempat bagi mahasiswa untuk bersantai, berdiskusi, atau bekerja secara kolaboratif. Ruang ini menjadi titik pusat bagi komunitas Informatika untuk berkumpul, berbagi ide, dan menikmati suasana yang mendukung kegiatan akademik maupun sosial.
           </p>
         </div>
+        <!-- Find Us In Section -->
+      <div class="find-us-in">
+        <h3>Find us in</h3>
+        <div class="location-card">
+          <div class="location-image">
+            <img src="img/placeholder.jpg" alt="Location Image" />
+          </div>
+          <div class="location-details">
+            <h4 class="location-name">Informatics South Area - 2nd Floor</h4>
+            <p class="location-description">
+              Teknik Kimia Street - Teknik Informatika Departement<br>
+              Campus Institut Teknologi Sepuluh Nopember Surabaya<br>
+              Highway ITS, Sukolilo, Surabaya 60111, Indonesia
+            </p>
+            <div class="location-schedule">
+              <strong>Opening Hours:</strong>
+              <p>Mon - Fri: 7 AM - 6 PM</p>
+              <p>Sat - Sun: Closed</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- About section end -->
 
@@ -84,14 +92,14 @@
       <div class="row">
         <div class="facility-card">
           <img
-            src="img/schematics2024.png"
+            src="img/placeholder.jpg"
             class="facility-card-img"
             width="300"
           />
           <h3 class="facility-card-title">Cantumin Fasilitas</h3>
         </div>
         <div class="facility-card">
-          <img src=".png" class="facility-card-img" width="300" />
+          <img src="img/placeholder.jpg" class="facility-card-img" width="300" />
           <h3 class="facility-card-title">Cantumin fasilitas</h3>
         </div>
       </div>
@@ -107,7 +115,7 @@
       </div>
 
       <div class="credit">
-        <p>Property of <a href="">Kelompok 9</a>. | &copy; 2025.</p>
+        <p>Property of <a href="">Kelompok 9</a> | &copy; 2025</p>
       </div>
     </footer>
     <!-- Footer Section end -->
@@ -126,8 +134,14 @@
     <script>
       var typed = new Typed("#element", {
         strings: ["Plaza Selatan"],
-        typeSpeed: 300,
-        loop: true,
+        typeSpeed: 200,
+        loop: false,
+        onComplete: function(self) { // loop tapi manual waktunya
+            setTimeout(function() {
+                self.reset();  // Reset animasi ke awal setiap selesai
+                self.start();  // Setelah reset, mulai ulang animasinya
+            }, 10000);  // Delay of 10 detik
+        }
       });
     </script>
 
